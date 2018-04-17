@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="announceview.aspx.cs" Inherits="announceview" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Create.aspx.cs" Inherits="announceview" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -283,10 +283,34 @@
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 关键字</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 地点</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
                                         <asp:TextBox ID="TextBox3" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 时间</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:TextBox ID="TextBox4" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 时长</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:TextBox ID="TextBox5" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 人数</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:TextBox ID="TextBox6" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -321,14 +345,6 @@
                                             <asp:ListItem Value="军事">军事</asp:ListItem>
                                             <asp:ListItem Value="环境">环境</asp:ListItem>
                                         </asp:DropDownList>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition" style="margin-top:0.8em;"><i class="fa fa-picture-o "></i> 上传图片</label>
-                                <div class="col-md-8 artcle_text">
-                                    <div class="input-group artcle-input-group">
-                                        <asp:FileUpload ID="FileUpload1" CssClass="form-control1_artcle" runat="server" Style="width: 15em; height: auto" />
                                     </div>
                                 </div>
                             </div>

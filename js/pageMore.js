@@ -8,14 +8,14 @@ $(function () {
     pageShow();
     page++;
     $(document).on('scroll', scrollListen);
-    likeClick();
-    unlikeClick();
-    collectClick();
-    TypeClick();
-    SearchClick();
+    //likeClick();
+    //unlikeClick();
+    //collectClick();
+    //TypeClick();
+    //SearchClick();
     DeleteNews();
-        CollectionShow();
-    getCity();
+    //CollectionShow();
+    //getCity();
 })
 function scrollListen() {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
@@ -33,7 +33,7 @@ function pageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index_News.aspx/getNewsJson',
+        url: 'index.aspx/getNewsJson',
         async: false,
         data: "{'page':'" + page + "', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
         dataType: "json",
@@ -49,6 +49,7 @@ function pageShow() {
                                 value['Ntitle'] + '</a>' +
                                 '<ul class="panel-tools">'+
                                     '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
+                                    '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
                                 '</ul>'+
                             '</div>'+
                             '<div class="panel-body" style="display: block;">'+
@@ -57,7 +58,6 @@ function pageShow() {
                                    '<div id="example-8">'+
                                         '<!--<span>资讯内容</span>-->'+
                                         '<div class="content-left">'+
-                                            '<a href="view_News.aspx?Nid=' + value['Nid'] + '">' + '<img src="' + value['Nimage_url'] + '" alt="图片" width = "180px" height="120px">' + '</a>' +
                                         '</div>'+
                                         '<div class="content-right">'+
                                             '<a href="view_News.aspx?Nid='+value['Nid']+'">'+
@@ -66,19 +66,19 @@ function pageShow() {
                                         '</div>'+
                                     '</div>'+
                                     '<div class="sort">'+
-                                        value['Ntype']+
+                                        value['Ntime'] + ' 时长:'+ value['Nimage_url'] +
                                     '</div>'+
                                     '<div class="isLikeButton">'+
-                                        '<div class="collectBox">'+
-                                            '<input  id="collect" type="button" class="collect" value="" title="收藏"/>'+
-                                        '</div>'+
                                         '<div class="likeBox">'+
                                             '<input id="vote" class="isLikeButton_like" type="button" value="" />'+
-                                            '<div class="like_count">' + value['Ngoods'] + '</div>'+
+                                            '<div class="like_count">' + value['Ngoods'] + '/' + value['Nbads'] + '</div>'+
                                         '</div>'+
                                         '<div class="unlikeBox">'+
                                             '<input id="vote_down" class="isLikeButton_dislike" type="button" value="" />'+
-                                            '<div class="unlike_count">' + value['Nbads'] + '</div>'+
+                                            '<div class="like_count">' + value['Nkeyword'] + '</div>'+
+                                        '</div>'+
+                                        '<div class="collectBox">'+
+                                            '<input  id="collect" type="button" class="collect" value="" title="收藏"/>'+
                                         '</div>'+
                                     '</div>'+
                                 '</div>'+
