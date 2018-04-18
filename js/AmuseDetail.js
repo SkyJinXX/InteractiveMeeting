@@ -1,14 +1,15 @@
 ﻿var aid;
 
 $(function () {
-    aid = $.getUrlParam('aid');
-    messageShow();
-    CommentShow()
-    likeClick();
-    collectClick();
-    Button_switch();
-    Button_hide();
-    Reply();
+    //aid = $.getUrlParam('aid');
+    //messageShow();
+    // CommentShow()
+    // likeClick();
+    // collectClick();
+    // Button_switch();
+    // Button_hide();
+    // Reply();
+    Switch();
 })
 
 
@@ -77,8 +78,12 @@ function messageShow() {
 
 function ColExp() {
     $(document).on("click", ".comment_area_title", function () {
-
         $(this).parent().slideToggle();
+    });
+}
+function Switch() {
+    $(document).on("click", ".switch", function () {
+        $(this).value="关闭";
     });
 }
 

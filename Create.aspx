@@ -54,7 +54,7 @@
     <!--//Metis Menu -->
 	
 	
-	<title>写文章</title>
+	<title>新建会议</title>
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
@@ -73,12 +73,12 @@
                         <!--notifications of menu start -->
                         <ul class="nofitications-dropdown">
                             <li class="dropdown head-dpdn header-nav">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">推荐
+                                <a href="Create.aspx" class="dropdown-toggle">新增会议
                                 </a>
 
                             </li>
                             <li class="dropdown head-dpdn header-nav">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">发现
+                                <a href="index.aspx" class="dropdown-toggle">现有会议
                                 </a>
 
                             </li>
@@ -92,154 +92,9 @@
 
                 <div class="clearfix"></div>
             </div>
-            <!--search-box-->
-            <div class="search-box">
-                <input type="text" id="searchText" style="width: 100%; height: 30px;" placeholder="发现你的兴趣..." />
-
-            </div>
-            <div class="search-button">
-                <input type="button" id="searchButton" style="height: 30px;" value="搜索" />
-
-            </div>
             <!--//end-search-box-->
             <div class="header-right header-right-grid">
-                <div class="profile_details_left">
-                    <!--notifications of menu start -->
-                    <ul class="nofitications-dropdown">
-                        <li class="dropdown head-dpdn">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-heart"></i><span class="badge">...</span>
-                        </a>
-                        <ul class="dropdown-menu anti-dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>兴趣标签</h3>
-                                </div>
-                            </li>
-                            <li class="notification_header_li">
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-film"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>电影</span>
-                                    </div>
-                                </div>
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-child"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>体育</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li class="notification_header_li">
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-money"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>财经</span>
-                                    </div>
-                                </div>
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-newspaper-o"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>新闻</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li class="notification_header_li">
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-smile-o"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>搞笑</span>
-                                    </div>
-                                </div>
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-hand-rock-o"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>军事</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li class="notification_header_li">
-                                <div class="notification_header_line">
-                                    <div class="user_img">
-                                        <i class="fa fa-gamepad"></i>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <span>游戏</span>
-                                    </div>
-                                </div>
-                                <div class="notification_header_line">
-                                    <div class="notification_desc">
-                                        <span>...</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="interests.aspx">查看所有兴趣标签</a>
-                                </div>
-                            </li>
-                        </ul>
-                        </li>
-                        <li class="dropdown head-dpdn">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
-                        </a>
-                        <ul class="dropdown-menu anti-dropdown-menu" id="collection_menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>收藏的资讯 </h3>
-                                </div>
-                            </li>
-
-                        </ul>
-                        </li>
-                        <li class="dropdown head-dpdn">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-map-marker"></i><span class="badge blue">...</span>
-                            </a>
-                            <ul class="dropdown-menu anti-dropdown-menu">
-                                <li>
-                                    <div class="notification_header">
-                                        <h3>我的定位</h3>
-                                    </div>
-                                </li>
-                                <li style="width: 60%;margin:auto;">
-                                    <div class="location_icon">
-                                        <i class="fa fa-street-view"></i>
-                                    </div>
-                                    <div class="location"></div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li>
-                                    <div class="notification_bottom">
-                                        
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
+                
 
                 <!--notification menu end -->
                 <div class="profile_details">
@@ -271,7 +126,7 @@
                 <div class="messageBox">
                     <div class="artcle_message">
                         <div class="form-title">
-                            <h4>我要爆料</h4>
+                            <h4>会议信息</h4>
                         </div>
                         <div class="artcle_message_box">
                             <div class="form-group" style="height: 40px">
@@ -286,7 +141,15 @@
                                 <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 地点</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <asp:TextBox ID="TextBox3" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox3" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请输入地点"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 日期</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <input type="date" value="2018-05-01"/>
                                     </div>
                                 </div>
                             </div>
@@ -294,94 +157,46 @@
                                 <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 时间</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <asp:TextBox ID="TextBox4" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                        <input type="time" value="08:00"/>——
+                                        <input type="time" value="11:00"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 时长</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 总人数</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <asp:TextBox ID="TextBox5" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                        <input type="number" min="1" max="1000" value="10" />
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 人数</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 互动项目</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <asp:TextBox ID="TextBox6" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                        <select>
+                                            <option value="volvo">投票</option>
+                                            <option value="saab">评分</option>
+                                            <option value="opel">抽奖</option>
+                                            <option value="audi">弹幕</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group" style="height: 205px;">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-newspaper-o "></i> 内容</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-newspaper-o "></i> 简介</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
                                         <asp:TextBox ID="TextBox2" CssClass="form-control1" runat="server" TextMode="MultiLine" placeholder="请输入正文" Height="200px"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-list-ol"></i> 类别</label>
-                                <div class="col-md-8 artcle_text">
-                                    <div class="input-group artcle-input-group">
-                                        <asp:DropDownList ID="DropDownList1" CssClass="form-control1_artcle" runat="server" Height="25px" Width="147px">
-                                            <asp:ListItem Value="资讯类别"> </asp:ListItem>
-                                            <asp:ListItem Value="娱乐">娱乐</asp:ListItem>
-                                            <asp:ListItem Value="游戏">游戏</asp:ListItem>
-                                            <asp:ListItem Value="体育">体育</asp:ListItem>
-                                            <asp:ListItem Value="趣事">趣事</asp:ListItem>
-                                            <asp:ListItem Value="美食">美食</asp:ListItem>
-                                            <asp:ListItem Value="生活">生活</asp:ListItem>
-                                            <asp:ListItem Value="时尚">时尚</asp:ListItem>
-                                            <asp:ListItem Value="文化">文化</asp:ListItem>
-                                            <asp:ListItem Value="环境">环境</asp:ListItem>
-                                            <asp:ListItem Value="经济">经济</asp:ListItem>
-                                            <asp:ListItem Value="政治">政治</asp:ListItem>
-                                            <asp:ListItem Value="教育">教育</asp:ListItem>
-                                            <asp:ListItem Value="科技">科技</asp:ListItem>
-                                            <asp:ListItem Value="精神">精神</asp:ListItem>
-                                            <asp:ListItem Value="军事">军事</asp:ListItem>
-                                            <asp:ListItem Value="环境">环境</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group_save" style="height: 40px; text-align: center">
-                                <asp:Button ID="Upload" runat="server" Text="提交" OnClick="Upload_Click" />
+                                <asp:Button ID="Upload" runat="server" Text="完成" OnClick="Upload_Click" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="messageBox">
-                    <div class="artcle_message">
-                        <div class="form-title">
-                            <h4>已写文章</h4>
-                        </div>
-                        <div class="artcle_message_box">
-                            <asp:Label ID="Label3" runat="server" Text="Label" Enabled="False"></asp:Label>
-                        </div>
-                    </div>
-                </div>
-				<div class="nav-right-one">
-                    <div class="nav-right-one-title"><b>热门</b></div>
-					<ul>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=96" id="a" runat="server">全国优秀民族歌剧展演</a></li>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=98" id="b" runat="server">专访理查德·弗兰纳根</a></li>
-                        <li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=85" id="c" runat="server">儿童邪典片流入中国毒害儿童</a></li>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=79" id="d" runat="server">北京的无雪之冬</a></li>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=64" id="h" runat="server">新华社评美301调查</a></li>
-                        <li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=62" id="f" runat="server">我们要保护人类和星球</a></li>
-					</ul>
-				</div>
-                <div class="nav-right-two">
-					<ul>
-						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 

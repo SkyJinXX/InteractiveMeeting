@@ -57,7 +57,7 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-	<title>资讯</title>
+	<title>现有会议</title>
     
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
@@ -76,13 +76,13 @@
 					<div class="profile_details_left-one"><!--notifications of menu start -->
 						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn header-nav">
-								<a href="index_News.aspx" class="dropdown-toggle">
+								<a href="Create.aspx" class="dropdown-toggle">
 									新增会议
 								</a>
 								
 							</li>
 							<li class="dropdown head-dpdn header-nav">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<a href="index.aspx" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									现有会议
 								</a>
 								

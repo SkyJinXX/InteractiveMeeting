@@ -3,18 +3,41 @@ var SourseType = "Recommand";
 var keyWord = "null";
 $(function () {
   
-    pageShow();
-    page++;
-    $(document).on('scroll', scrollListen);
-    likeClick();
-    unlikeClick();
-    collectClick();
-    TypeClick();
-    SearchClick();
-    DeleteNews();
-        CollectionShow();
-    getCity();
+    // pageShow();
+    // page++;
+    // $(document).on('scroll', scrollListen);
+    // likeClick();
+    // unlikeClick();
+    // collectClick();
+    // TypeClick();
+    // SearchClick();
+    // DeleteNews();
+    //     CollectionShow();
+    // getCity();
+
+    voteClick();
 })
+function vote(){    //函数vote，当点击确认投票的时候，调用vote方法  
+          
+        //for循环的条件是，所有投票选项的个数。  
+
+        for(var i = 0; i < document.getElementsByName("option").length; i++){  
+              
+            //查找到是哪个投票选项被选中  
+            if(document.getElementsByName("option")[i].checked == true){  
+                var width = document.getElementById(i).style.width; //获取到当前选项的宽度。  
+                width = parseInt(width);//将宽度转化为int型，因为获取到的width的单位是px  
+                width += 3;//改变width的值，这里就是定义每次投票的进度条的增速  
+                document.getElementById(i).style.width = width+"px";//修改原div的宽度  
+                var label = "label"+i;//lable标签里面写的是当前的投票数目。  
+                var num = document.getElementById(label).innerText;//获取到当前的票数  
+                document.getElementById(label).innerText = ++num;//票数加1，并修改原值  
+            }  
+        }  
+  
+        //alert("投票成功");  
+          
+    }  
 function scrollListen() {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
             if (bottomPadding < 50) {
@@ -102,28 +125,21 @@ function pageShow() {
         }
     });
 }
-function likeClick(){
-    $(document).on("click", ".likeBox", function(){
-        var fid = jQuery(this).parent().parent().parent().parent().parent().parent().attr('fid');
-        console.log(fid);
-    var number = jQuery(this).children('div').text();
-    number = (parseInt(number) + 1).toString();
-    jQuery(this).children('div').text(number);
-    $.ajax({
-        type: 'post',
-        contentType: "application/json",
-        url: 'index_food.aspx/Liking',
-        async: true,
-        data: "{'fid':'" + fid + "'}",
-        dataType: "json",
-        success: function (result) {
-            
-        },
-        error: function (textStatus, errorThrown) {
-            console.log(textStatus);
-            console.log(errorThrown);
-        }
-    });
+function voteClick(){
+    $(document).on("click", "#vote", function(){
+    for(var i = 0; i < document.getElementsByName("option").length; i++){  
+              
+            //查找到是哪个投票选项被选中  
+            if(document.getElementsByName("option")[i].checked == true){  
+                var width = document.getElementById(i).style.width; //获取到当前选项的宽度。  
+                width = parseInt(width);//将宽度转化为int型，因为获取到的width的单位是px  
+                width += 3;//改变width的值，这里就是定义每次投票的进度条的增速  
+                document.getElementById(i).style.width = width+"px";//修改原div的宽度  
+                var label = "label"+i;//lable标签里面写的是当前的投票数目。  
+                var num = document.getElementById(label).innerText;//获取到当前的票数  
+                document.getElementById(label).innerText = ++num;//票数加1，并修改原值  
+            }  
+        }  
 });
 }
 function unlikeClick(){

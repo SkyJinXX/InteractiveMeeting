@@ -45,19 +45,6 @@ public partial class announceview : System.Web.UI.Page
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
            
-
-
-            cmd.CommandText = "select Ntitle from News where Nid='200'";
-            if (cmd.ExecuteScalar() != null)
-            {
-                Label3.Text = cmd.ExecuteScalar().ToString();
-            }
-            else
-            {
-                Label3.Text = "";
-            }
-           
-
             conn.Close();
         }
     }

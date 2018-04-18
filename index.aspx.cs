@@ -15,7 +15,7 @@ using System.Web.Script.Serialization;
 public partial class index : System.Web.UI.Page
 {
     //全局变量 用于迭代资讯主键
-    public const int maxSize = 1;
+    public const int maxSize = 3;
     //页面加载
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -255,7 +255,7 @@ public partial class index : System.Web.UI.Page
     {
         List<int> random_res;
         List<int> base_res = new List<int>();
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 3; i++) {
             base_res.Add(i);
         } 
         random_res = base_res.OrderBy(x => Guid.NewGuid()).ToList();

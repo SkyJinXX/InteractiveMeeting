@@ -10,7 +10,7 @@ $(function () {
     $(document).on('scroll', scrollListen);
     //likeClick();
     //unlikeClick();
-    //collectClick();
+    collectClick();
     //TypeClick();
     //SearchClick();
     DeleteNews();
@@ -45,10 +45,10 @@ function pageShow() {
                 $('.row').append(
                     '<div class="col-md-6" Nid="' + value['Nid'] +'">'+
                         '<div class="panel panel-widget">'+
-                            '<div class="panel-title">' + '<a href="view_News.aspx?Nid=' + value['Nid'] + '">' +
+                            '<div class="panel-title">' + '<a href="Detail.aspx?Nid=' + value['Nid'] + '">' +
                                 value['Ntitle'] + '</a>' +
                                 '<ul class="panel-tools">'+
-                                    '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
+                                    //'<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
                                     '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
                                 '</ul>'+
                             '</div>'+
@@ -60,13 +60,14 @@ function pageShow() {
                                         '<div class="content-left">'+
                                         '</div>'+
                                         '<div class="content-right">'+
-                                            '<a href="view_News.aspx?Nid='+value['Nid']+'">'+
+                                            '<a href="Detail.aspx?Nid='+value['Nid']+'">'+
                                                 value['Ncontent']+
                                             '</a>'+
                                         '</div>'+
                                     '</div>'+
                                     '<div class="sort">'+
-                                        value['Ntime'] + ' 时长:'+ value['Nimage_url'] +
+                                        value['Ntime'] + 
+                                        ' 时间:'+ value['Nkeyword'] + '-' + value['Nimage_url'] +
                                     '</div>'+
                                     '<div class="isLikeButton">'+
                                         '<div class="likeBox">'+
@@ -75,7 +76,7 @@ function pageShow() {
                                         '</div>'+
                                         '<div class="unlikeBox">'+
                                             '<input id="vote_down" class="isLikeButton_dislike" type="button" value="" />'+
-                                            '<div class="like_count">' + value['Nkeyword'] + '</div>'+
+                                            '<div class="like_count">' + value['Ntype'] + '</div>'+
                                         '</div>'+
                                         '<div class="collectBox">'+
                                             '<input  id="collect" type="button" class="collect" value="" title="收藏"/>'+
@@ -96,26 +97,7 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
-    jQuery(this).children('#vote').attr("class", "isLikeButton_like_checked"); 
-    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
-    var number = jQuery(this).children('div').text();
-    number = (parseInt(number) + 1).toString();
-    jQuery(this).children('div').text(number);
-    $.ajax({
-        type: 'post',
-        contentType: "application/json",
-        url: 'index_News.aspx/Liking',
-        async: true,
-        data: "{'nid':'" + Nid + "'}",
-        dataType: "json",
-        success: function (result) {
-            console.log("点赞+1");
-        },
-        error: function (textStatus, errorThrown) {
-            console.log(textStatus);
-            console.log(errorThrown);
-        }
-    });
+    
 });
 }
 function unlikeClick(){
@@ -144,23 +126,7 @@ function unlikeClick(){
 }
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
-    jQuery(this).children('#collect').attr("class", "collect_checked"); 
-    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
-    $.ajax({
-        type: 'post',
-        contentType: "application/json",
-        url: 'index_News.aspx/Collecting',
-        async: true,
-        data: "{'nid':'" + Nid + "'}",
-        dataType: "json",
-        success: function (result) {
-            console.log("成功收藏");
-        },
-        error: function (textStatus, errorThrown) {
-            console.log(textStatus);
-            console.log(errorThrown);
-        }
-    });
+        window.open("images/QRcode.png");
 });
 }
 
