@@ -60,3 +60,15 @@
 #Upload:hover {
     background-color: #7EC0EE;
 }
+
+.timeBox{
+    width:40%;
+}
+
+.box {
+    line-height: 34px;
+}
+
+.participate_count{
+    margin-top:0.3em;
+}

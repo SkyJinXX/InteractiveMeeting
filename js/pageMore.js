@@ -57,8 +57,6 @@ function pageShow() {
                                 '<div class="candlestick">'+
                                    '<div id="example-8">'+
                                         '<!--<span>资讯内容</span>-->'+
-                                        '<div class="content-left">'+
-                                        '</div>'+
                                         '<div class="content-right">'+
                                             '<a href="Detail.aspx?Nid='+value['Nid']+'">'+
                                                 value['Ncontent']+
@@ -73,13 +71,13 @@ function pageShow() {
                                         '<div class="likeBox">'+
                                             '<input id="vote" class="isLikeButton_like" type="button" value="" />'+
                                             '<div class="like_count">' + value['Ngoods'] + '/' + value['Nbads'] + '</div>'+
-                                        '</div>'+
+                                        '</div>' +
+                                        '<div class="collectBox">' +
+                                        '<input  id="collect" type="button" class="collect" value="" title="扫描二维码参加会议"/>会议二维码' +
+                                        '</div>' +
                                         '<div class="unlikeBox">'+
                                             '<input id="vote_down" class="isLikeButton_dislike" type="button" value="" />'+
                                             '<div class="like_count">' + value['Ntype'] + '</div>'+
-                                        '</div>'+
-                                        '<div class="collectBox">'+
-                                            '<input  id="collect" type="button" class="collect" value="" title="收藏"/>'+
                                         '</div>'+
                                     '</div>'+
                                 '</div>'+

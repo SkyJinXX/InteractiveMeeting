@@ -130,7 +130,7 @@
         <div id="page-wrapper">
 			<div class="main-page">
                 <div class="messageBox">
-                    <div class="artcle_message">
+                    <div class="artcle_message" style="height:52em">
                         <div class="form-title">
                             <h4>会议信息</h4>
                         </div>
@@ -163,8 +163,8 @@
                                 <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 时间</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <input type="time" value="08:00"/>——
-                                        <input type="time" value="11:00"/>
+                                        <input class="timeBox" type="time" value="08:00"/>——
+                                        <input class="timeBox" type="time" value="11:00"/>
                                     </div>
                                 </div>
                             </div>
@@ -172,14 +172,14 @@
                                 <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 人数</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <input type="number" min="1" max="1000" value="10" />
+                                        <input class="box" type="number" min="1" max="1000" value="10" />
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
                                 <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 已参加</label>
                                 <div class="col-md-8 artcle_text">
-                                    <div class="input-group artcle-input-group">
+                                    <div class="input-group artcle-input-group box participate_count">
                                         10
                                     </div>
                                 </div>
@@ -189,16 +189,16 @@
                                 <div class="col-md-8 artcle_text">
                                     <div class="activity">
                                         <ul>
-                                            <li>
-                                                投票<input type="button" class="switch" value="开启"/><input type="button" value="查看" onclick="window.location.href='vote.aspx' "/>
+                                            <li class="li_line">
+                                                投票<input type="button" class="switch" value="开启"/><input class="switch" type="button" value="查看" onclick="window.location.href='vote.aspx' "/>
                                             </li>
-                                            <li>
-                                                评分<input type="button" class="switch" value="开启"/><input type="button" value="查看" onclick="window.location.href='star.aspx' "/>
+                                            <li class="li_line">
+                                                评分<input type="button" class="switch" value="开启"/><input class="switch" type="button" value="查看" onclick="window.location.href='star.aspx' "/>
                                             </li>
-                                            <li>
-                                                抽奖<input type="button" class="switch" value="开启"/><input type="button" value="查看" onclick="window.location.href='DrawMoney.aspx' "/>
+                                            <li class="li_line">
+                                                抽奖<input type="button" class="switch" value="开启"/><input class="switch" type="button" value="查看" onclick="window.location.href='DrawMoney.aspx' "/>
                                             </li>
-                                            <li>
+                                            <li class="li_line">
                                                 弹幕<input type="button" class="switch" value="开启"/>
                                             </li>
                                         </ul>
@@ -216,6 +216,7 @@
                             <div class="form-group_save" style="height: 40px; text-align: center">
                                 <asp:Button ID="Upload" runat="server" Text="保存修改" OnClick="Upload_Click" />
                             </div>
+                            <div class="clearfloat"></div>
                         </div>
                     </div>
                 </div>
