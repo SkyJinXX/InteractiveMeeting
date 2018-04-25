@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 日期</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-calendar "></i> 日期</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
                                         <input type="date" value="2018-05-01"/>
@@ -154,27 +154,27 @@
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 时间</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-clock-o "></i> 时间</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <input type="time" value="08:00"/>——
-                                        <input type="time" value="11:00"/>
+                                        <input class="timeBox" type="time" value="08:00"/>——
+                                        <input class="timeBox" type="time" value="11:00"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 总人数</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-users "></i> 总人数</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <input type="number" min="1" max="1000" value="10" />
+                                        <input class="box" type="number" min="1" max="1000" value="10" />
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 互动项目</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-sitemap "></i> 互动项目</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
-                                        <select>
+                                        <select style="height: 34px;">
                                             <option value="volvo">投票</option>
                                             <option value="saab">评分</option>
                                             <option value="opel">抽奖</option>
